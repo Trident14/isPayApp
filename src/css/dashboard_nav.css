@@ -1,0 +1,106 @@
+.main-panel {
+    display: flex;
+    border-radius: 1.5rem;
+    border-style: groove;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    padding: 8px;
+    margin-top: 10rem;
+    backdrop-filter: saturate(180%) blur(5px);
+  }
+  
+  .user-detail-panel {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-sub-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* Updated */
+    margin-top: 10px;
+    
+    
+  }
+.pop-btn{
+  font-size: small;
+  padding: 5px 10px;
+}
+.balance-holder{
+  display: flex;
+  gap: 1rem;
+ 
+}
+.refresh-logo{
+    width: 25px;
+  
+}
+.refresh-btn{
+  background-color: transparent;
+  font-size: xx-small;
+  padding: 5px 10px;
+  width: max-content;
+  border-color: transparent;
+  backdrop-filter: saturate(180%) blur(5px);
+}
+.next-btn{
+  font-size: xx-small;
+ 
+  margin-top: 1rem;
+  padding: 5px 10px;
+  width: max-content;
+}
+.btn-prev-next{
+  display: flex;
+  justify-content: space-between;
+}
+.prev-btn{
+  font-size: xx-small;
+ 
+  margin-top: 1rem;
+  padding: 5px 10px;
+  width: max-content;
+}
+.inside-btn {
+  font-size: small;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* table style view all goal */
+.savings-table {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f5f5f5;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+

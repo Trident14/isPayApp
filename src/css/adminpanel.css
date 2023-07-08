@@ -1,0 +1,23 @@
+.main-panel{
+    display: flex;
+    border-radius: 1.5rem;
+    border-style: groove;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    padding: 8px;
+    margin-top: 10rem;
+    backdrop-filter: saturate(180%) blur(5px);
+    justify-content: space-between;
+
+}
+.main-inner{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 2rem;
+}

@@ -1,0 +1,36 @@
+
+.popup {
+    display: flex;
+    top: 10px;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+  }
+  
+  .popup-inner {
+    display: flex;
+    flex-direction: column; /* Updated */
+    align-items: center;
+    justify-content: flex-start; /* Updated */
+    padding: 40px; /* Updated */
+    width: 100%;
+    max-width: 640px;
+    background-color: white;
+    border-radius: 1.5rem;
+    height: max-content;
+  }
+ 
+  
+  .popup-inner .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 16px;
+    font-size: small;
+    padding: 5px 10px;
+  }
+  
