@@ -60,34 +60,34 @@ const validatePassword = () => {
    
   };
 
-  const handleSignInClick = async(event) => {
-    event.preventDefault()  //this prevents react default onsubmit bheaviour
-        
-    //can use try catch or promiss
-    try{
-      const response=  await axios.post("https://ispay.onrender.com/login",{username,password});
-        //in register we are not expecting anything from api but now we get the token
-       
-        // we get token in response , we set the browser cookie to that toke to authtenticate user
-        setCookies("access_token",response.data.token);
-        //storing in local storage
-      
-        window.localStorage.setItem("username",response.data.username);
-        if(response.data.isAdmin)
-          Navigate("/adminPanel"); 
-        else{
+  const handleSignInClick = async (event) => {
+    event.preventDefault();
+  
+    try {
+      const response = await axios.post("https://ispay.onrender.com/login", { username, password });
+  
+      setCookies("access_token", response.data.token);
+      window.localStorage.setItem("username", response.data.username);
+  
+      if (response.data.isAdmin) {
+        Navigate("/adminPanel");
+      } else {
+        // Redirect to the dashboard only if the user exists
+        if (response.data.username) {
           Navigate("/dashboard");
-        }//this redirect to the page url mentioned
-        
-        
-    }catch(err){
-        if (err.response && err.response.status === 401) {
-           alert(err.data);
-          } else {
-            alert("An error occurred. Please try again later.");
-          }
+        } else {
+          alert("User does not exist. Please check your credentials.");
+        }
+      }
+    } catch (err) {
+      if (err.response && err.response.status === 401) {
+        alert(err.data.message);
+      } else {
+        alert("An error occurred. Please try again later.");
+      }
     }
   };
+  
  
   return (
     <>
