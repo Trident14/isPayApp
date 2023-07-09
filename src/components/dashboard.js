@@ -199,7 +199,14 @@ const warningFunc = (goalname) => {
  
   
   if (goal_IsLoading || transaction_IsLoading || balance_IsLoading) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <div class="loader">
+            <div class="loader__text">Loading...</div>
+            <div class="loader__spinner"></div>
+        </div>
+      </>
+    );
   }
   
   if (goal_Error) {
